@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration form Page</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+
+</head>
+ <!-- background image -->
+<body background="Assets/Images/botellas3.jpeg" style="opacity:75%" alt="bottles image">
+
+
+    <div class="container" style="background-color: transparent">
+
+        <!-- top of the page title  -->
+        <div class="jumbotron" style="background-color: transparent">
+            <h1 class="text-center" style="color: snow">Kava</h1>
+            <hr>
+            <h1 class="text-center" style="-webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color:snow; text-size-adjust: 40 px;">Registration form</h2>
+                <br>
+
+                <!-- Registration Form -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Registration form</h4>
+                            </div>
+                            <div class="panel-body">
+
+                                <form role="form">
+
+                                    <div class="columns text-danger">
+                                        <span class="required-copy">*Required</span>
+                                    </div>
+
+
+                                    <!-- might have issues on id="reserve_name" -->
+                                    <div class="form-group col-md-6">
+                                        <label for="firstName-input">First Name</label>
+                                        <input type="text" class="form-control" id="reserve_firstName" placeholder="First Name">
+                                    </div>
+
+
+                                    <div class="form-group col-md-6">
+                                        <label for="lastName-input">Last Name</label>
+                                        <input type="text" class="form-control" id="reserve_name" placeholder="Last Name">
+                                    </div>
+
+                                    <form>
+                                        <div class="form-row">
+
+                                                <!-- Email -->
+                                            <div class="form-group col-md-6">
+                                                <label for="email-input">Email</label>
+                                                <input type="email" class="form-control" id="email-input" placeholder="Email">
+                                            </div>
+
+                                            <!-- Password -->
+                                            <div class="form-group col-md-6">
+                                                <label for="Password-input">Password</label>
+                                                <input type="password" class="form-control" id="Password-input" placeholder="Password">
+                                            </div>
+                                        </div>
+
+                                        <!-- Address -->
+                                        <div class="form-group">
+                                            <label for="address-input">Address</label>
+                                            <input type="text" class="form-control" id="address-input" placeholder="1234 Main St">
+                                        </div>
+
+                                        <!-- Address 2 -->
+                                        <div class="form-group">
+                                            <label for="address2-input">Address 2</label>
+                                            <input type="text" class="form-control" id="address2-input" placeholder="Apartment, studio, or floor">
+                                        </div>
+
+                                        <!-- City -->
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="city-input">City</label>
+                                                <input type="text" class="form-control" id="city-input">
+                                            </div>
+
+                                            <!-- Dropdown estados de México -->
+                                            <div class="form-group col-md-4">
+                                                <label for="state-input">State</label>
+                                                <select id="state-input" class="form-control">
+                                                    <option selected>Choose...</option>
+
+                                                    <option value="0">Todo México</option>
+
+                                                    <option value="1">Aguascalientes</option>
+
+                                                    <option value="2">Baja California</option>
+
+                                                    <option value="3">Baja California Sur</option>
+
+                                                    <option value="4">Campeche</option>
+
+                                                    <option value="5">Coahuila</option>
+
+                                                    <option value="6">Colima</option>
+
+                                                    <option value="7">Chiapas</option>
+
+                                                    <option value="8">Chihuahua</option>
+
+                                                    <option value="9">Distrito Federal</option>
+
+                                                    <option value="10">Durango</option>
+
+                                                    <option value="11">Guanajuato</option>
+
+                                                    <option value="12">Guerrero</option>
+
+                                                    <option value="13">Hidalgo</option>
+
+                                                    <option value="14">Jalisco</option>
+
+                                                    <option value="15">México</option>
+
+                                                    <option value="16">Michoacán</option>
+
+                                                    <option value="17">Morelos</option>
+
+                                                    <option value="18">Nayarit</option>
+
+                                                    <option value="19">Nuevo León</option>
+
+                                                    <option value="20">Oaxaca</option>
+
+                                                    <option value="21">Puebla</option>
+
+                                                    <option value="22">Querétaro</option>
+
+                                                    <option value="23">Quintana Roo</option>
+
+                                                    <option value="24">San Luis Potosí</option>
+
+                                                    <option value="25">Sinaloa</option>
+
+                                                    <option value="26">Sonora</option>
+
+                                                    <option value="27">Tabasco</option>
+
+                                                    <option value="28">Tamaulipas</option>
+
+                                                    <option value="29">Tlaxcala</option>
+
+                                                    <option value="30">Veracruz</option>
+
+                                                    <option value="31">Yucatán</option>
+
+                                                    <option value="32">Zacatecas</option>
+
+
+
+                                                </select>
+                                            </div>
+
+                                                <!-- Zipcode -->
+                                            <div class="form-group col-md-2">
+                                                <label for="Zip-input">Zip</label>
+                                                <input type="text" class="form-control" id="Zip-input">
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                       <!-- Date of Birth -->
+
+                                                <div class="form-group col-md-4">
+                                                        <form action="/action_page.php">
+                                                    <label for="dateOfBirth">Date of Birth</label>
+                                                    <input type="date" name="DOB" class="form-control" id="dateOfBirth">
+                                                    <!-- <input type="submit" value="Submit"> -->
+                                                </form>
+                                                </div>
+
+
+
+                                    <!-- Submit/ back buttons -->
+                                    <a class="btn btn-primary back" href="index.html" role="button" class="form-group col-md-4">back</a>
+
+                                    <button type="submit" class="btn btn-primary submit" href="confirmation.html" form="form-inline">Submit</button>
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+
+
+
+
+
+</body>
+
+</html>
+<script type="text/javascript">
+
+    $(".submit").on("click", function () {
+
+        // Here we grab the form elements
+        var newReservation = {
+            customerName: $('#reserve_name').val().trim(),
+            phoneNumber: $('#reserve_phone').val().trim(),
+            customerEmail: $('#reserve_email').val().trim()
+
+            onclick="javascript:NewCssCal ('demo1','MMddyyyy','dropdown',true,'24',true)"
+        };
+
+        console.log(newReservation);
+
+
+        var currentURL = window.location.origin;
+
+        $.post(currentURL + "/api/tables", newReservation,
+            function (data) {
+
+
+                if (data == true) {
+                    alert("Succefully registered!")
+                }
+
+
+                if (data == false) {
+                    alert("Sorry ")
+                }
+
+
+                $('#reserve_name').val("");
+                $('#reserve_phone').val("");
+                $('#reserve_email').val("");
+
+
+            });
+
+        return false;
+
+    });
+
+</script>

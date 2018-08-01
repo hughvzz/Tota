@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation PinputDateOfBirth</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+
+</head>
+<!-- background iminputDateOfBirth -->
+
+<body background="Assets/Images/botellas3.jpeg" style="opacity: 75%;" alt="bottles image">
+
+
+    <div class="container" style="background-color: transparent">
+
+        <!-- top of the pinputDateOfBirth title  -->
+        <div class="jumbotron" style="background-color: transparent">
+            <h1 class="text-center" style="color: snow">Kava</h1>
+            <hr>
+            <h1 class="text-center" style="-webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color:snow; text-size-adjust: 40 px;">Confirmation Page</h2>
+                <br>
+
+                <!-- Registration Form -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Confirmation Page</h4>
+                            </div>
+                            <div class="panel-body">
+
+                                <form role="form">
+
+
+                                    <!-- Most Recent Member card -->
+                                    <div class="col-lg-6">
+                                        <div class="card card-default">
+                                            <div class="card-heading">
+                                                <h3 class="card-title">Review Info</h3>
+                                            </div>
+                                            <div class="card-body" id="recent-member">
+                                                <h2 id="firstName-display" + firstName + ": ">Carlos</h2>
+                                                <h2 id="lastName-display">Fuentes</h2>
+                                                <h4 id="email-display">
+                                                   
+                                                </h4>
+                                                <h4 id="address-display">109 revolucion, colonia centro</h4>
+                                                <h4 id="address2-display">suiet g</h4>
+                                                <h4 id="city-display">monterrey</h4>
+                                                <h4 id="state-display">Nuevo Leon</h4>
+                                                <h4 id="zip-display">67500</h4>
+                                                <h4 id="dateOfBirth-display">33</h4>
+                                                
+
+
+                                                <!-- Submit/ back buttons -->
+                                                <a class="btn btn-primary back" href="register.html" role="button" class="form-group col-md-4">back</a>
+
+                                                <button type="submit" class="btn btn-primary submit" form="form-inline">Submit</button>
+                                </form>
+
+
+
+                                </div>
+                                </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- jQuery -->
+                        <script src="https://code.jquery.com/jquery.js"></script>
+
+                        <!-- Script -->
+                        <script>
+                            // Capture Button Click
+                            $("#add-user").on("click", function (event) {
+                                // prevent form from trying to submit/refresh the pinputDateOfBirth
+                                event.preventDefault();
+
+                                // Capture User Inputs and store them into variables
+                                var firstName = $("#firstName").val().trim();
+                                var lastName = $("#lastName").val().trim();
+                                var email4 = $("#email-input").val().trim();
+                                var address = $("#address-input").val().trim();
+                                var address2 = $("#address2-input").val().trim();
+                                var city = $("#city-input").val().trim();
+                                var state = $("#state-input").val().trim();
+                                var zip = $("#zip-input").val().trim();
+                                var dateOfBirth = $("#dateOfBirth-input").val().trim();
+                               
+
+                                // Console log each of the user inputs to confirm we are receiving them
+                                console.log(firstName);
+                                console.log(lastName);
+                                console.log(email4);
+                                console.log(address);
+                                console.log(address2);
+                                console.log(city);
+                                console.log(state);
+                                console.log(zip);
+                                console.log(dateOfBirth);
+                                console.log(timeZone);
+
+                                // Output all of the new information into the relevant HTML sections
+                                $("#FirstName-display").text(firstName);
+                                $("#lastName-display").text(lastName);
+                                $("#inputEmail4-display").text(email4);
+                                $("#inputAddress-display").text(address);
+                                $("#inputAddress2-display").text(address2);
+                                $("#inputCity-display").text(city);
+                                $("#inputState-display").text(state);
+                                $("#inputZip-display").text(zip);
+                                $("#inputDateOfBirth-display").text(dateOfBirth);
+                                $("#comment-display").text(timeZone);
+
+                            });
+                        </script>
+
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>
+
