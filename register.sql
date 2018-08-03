@@ -9,18 +9,17 @@ USE register;
 CREATE TABLE user  (
 
   id int AUTO_INCREMENT,
-  coolness_points INT ,
+  
   firstName varchar(30) NOT NULL,
   lastName varchar(30) NOT NULL,
-  email varchar(30) NOT NULL,
-  PASSWORD varchar(30) NOT NULL,
+  email varchar(150) NOT NULL,
+  password varchar(50) NOT NULL,
   address varchar(100) NOT NULL,
   addressTwo varchar(50) NOT NULL,
-  city varchar(30) NOT NULL,
-  STATE varchar(30) NOT NULL,
+  city varchar(50) NOT NULL,
+  state varchar(50) NOT NULL,
   zip INT,
-  DATETIME,
-  CURRENT_DATE 
+ dob DATE,
 
   PRIMARY KEY(id)
 );

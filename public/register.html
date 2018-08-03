@@ -15,7 +15,7 @@
 
 </head>
  <!-- background image -->
-<body background="Assets/Images/botellas3.jpeg" style="opacity:75%" alt="bottles image">
+<body background="Images/background.jpg" style="opacity:75%" alt="bottles image">
 
 
     <div class="container" style="background-color: transparent">
@@ -91,7 +91,7 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="city-input">City</label>
-                                                <input type="text" class="form-control" id="city-input">
+                                                <input type="text" class="form-control" id="city-input" placeholder="City">
                                             </div>
 
                                             <!-- Dropdown estados de México -->
@@ -174,7 +174,7 @@
                                                 <!-- Zipcode -->
                                             <div class="form-group col-md-2">
                                                 <label for="Zip-input">Zip</label>
-                                                <input type="text" class="form-control" id="Zip-input">
+                                                <input type="text" class="form-control" id="Zip-input" placeholder="Zip">
                                             </div>
                                         </div>
                                     </form>
@@ -193,7 +193,7 @@
 
 
                                     <!-- Submit/ back buttons -->
-                                    <a class="btn btn-primary back" href="index.html" role="button" class="form-group col-md-4">back</a>
+                                    <a class="btn btn-primary back" href="Tota/index.html" role="button" class="form-group col-md-4">back</a>
 
                                     <button type="submit" class="btn btn-primary submit" href="confirmation.html" form="form-inline">Submit</button>
                                 </form>
@@ -213,47 +213,3 @@
 </body>
 
 </html>
-<script type="text/javascript">
-
-    $(".submit").on("click", function () {
-
-        // Here we grab the form elements
-        var newReservation = {
-            customerName: $('#reserve_name').val().trim(),
-            phoneNumber: $('#reserve_phone').val().trim(),
-            customerEmail: $('#reserve_email').val().trim()
-
-            onclick="javascript:NewCssCal ('demo1','MMddyyyy','dropdown',true,'24',true)"
-        };
-
-        console.log(newReservation);
-
-
-        var currentURL = window.location.origin;
-
-        $.post(currentURL + "/api/tables", newReservation,
-            function (data) {
-
-
-                if (data == true) {
-                    alert("Succefully registered!")
-                }
-
-
-                if (data == false) {
-                    alert("Sorry ")
-                }
-
-
-                $('#reserve_name').val("");
-                $('#reserve_phone').val("");
-                $('#reserve_email').val("");
-
-
-            });
-
-        return false;
-
-    });
-
-</script>
