@@ -149,13 +149,13 @@
       <title>Project 2</title>
       <h2 class=header2>KANBAN</h2>
       <button class=login onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-      <button class=signup onclick="" href="register.html" style="width:auto;">Sign Up</button>
+      <button class=signup onclick="/register.html" href="register.html" style="width:auto;">Sign Up</button>
 
       <div id="id01" class="modal">
          <form class="modal-content animate" action="/action_page.php">
             <div class="imgcontainer">
                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
-               <img src="img_ninja.png" alt="Avatar" class="avatar">
+               <img src="public/Images/img_ninja.png" alt="Avatar" class="avatar">
             </div>
             <div class="container">
                <label for="uname"><b>Username</b></label>
@@ -171,7 +171,7 @@
                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
-         </form> 
+         </form>
       </div>
       
       <script>
