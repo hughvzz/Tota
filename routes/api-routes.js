@@ -14,20 +14,20 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for getting all of the todos
-  app.get("/api/tota", function(req, res) {
+  app.get("/api/newUser", function(req, res) {
   });
 
   // POST route for saving a new todo. You can create a todo using the data on req.body
-  app.post("/api/tota", function(req, res) {
+  app.post("/api/newUser", function(req, res) {
 
   });
 
   // DELETE route for deleting todos. You can access the todo's id in req.params.id
-  app.delete("/api/tota/:id", function(req, res) {
+  app.delete("/apinewUser/:id", function(req, res) {
 
   });
 
   // PUT route for updating todos. The updated todo will be available in req.body
-  app.put("/api/tota", function(req, res) {
+  app.put("/api/newUser", function(req, res) {
   });
 };
