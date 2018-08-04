@@ -19,6 +19,9 @@
 <body background="Images/background.jpg" style="opacity:75%" alt="bottles image">
 
 
+    <!-- missing closing </form>  -->
+    <form action="/action_page.php">  
+
     <div class="container" style="background-color: transparent">
 
         <!-- top of the page title  -->
@@ -27,6 +30,7 @@
             <hr>
             <h1 class="text-center" style="-webkit-text-stroke-width: 2px;
                     -webkit-text-stroke-color:snow; text-size-adjust: 40 px;">Registration form</h2>
+                    <p>Please fill in this form to create an account.</p>
                 <br>
 
                 <!-- Registration Form -->
@@ -51,54 +55,62 @@
                                     <!-- might have issues on id="reserve_name" -->
                                     <div class="form-group col-md-6">
                                         <label for="firstName-input">First Name</label>
-                                        <input type="text" class="form-control" id="reserve_firstName" placeholder="First Name">
+                                        <input type="text" class="form-control" id="reserve_firstName" placeholder="First Name" name="firstName" required>
                                     </div>
 
 
                                     <div class="form-group col-md-6">
                                         <label for="lastName-input">Last Name</label>
-                                        <input type="text" class="form-control" id="reserve_name" placeholder="Last Name">
+                                        <input type="text" class="form-control" id="reserve_name" placeholder="Last Name"name="lastName" required>
                                     </div>
 
                                     <form>
                                         <div class="form-row">
 
                                             <!-- Email -->
-                                            <div class="form-group col-md-6">
+                                            <div class="form-group col-md-10">
                                                 <label for="email-input">Email</label>
-                                                <input type="email" class="form-control" id="email-input" placeholder="Email">
+                                                <input type="email" class="form-control" id="email-input" placeholder="Email"  name="Email" required>
                                             </div>
 
                                             <!-- Password -->
                                             <div class="form-group col-md-6">
                                                 <label for="Password-input">Password</label>
-                                                <input type="password" class="form-control" id="Password-input" placeholder="Password">
+                                                <input type="password" class="form-control" id="Password-input" placeholder="Password" name="Password" required>
                                             </div>
                                         </div>
+
+
+                                         <!-- Password confirmation-->
+                                         <div class="form-group col-md-6">
+                                                <label for="Password2-input">Password confirmation</label>
+                                                <input type="password" class="form-control" id="Password2-input" placeholder="Password confirmation" name="Password confirmation" required>
+                                            </div>
+                                        
 
                                         <!-- Address -->
                                         <div class="form-group">
                                             <label for="address-input">Address</label>
-                                            <input type="text" class="form-control" id="address-input" placeholder="1234 Main St">
+                                            <input type="text" class="form-control" id="address-input" placeholder="1234 Main St" name="address" required>
                                         </div>
 
                                         <!-- Address 2 -->
                                         <div class="form-group">
                                             <label for="address2-input">Address 2</label>
-                                            <input type="text" class="form-control" id="address2-input" placeholder="Apartment, studio, or floor">
+                                            <input type="text" class="form-control" id="address2-input" placeholder="Apartment, studio, or floor" name="address2" required>
                                         </div>
 
                                         <!-- City -->
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="city-input">City</label>
-                                                <input type="text" class="form-control" id="city-input" placeholder="City">
+                                                <input type="text" class="form-control" id="city-input" placeholder="City" name="City" required>
                                             </div>
 
                                             <!-- Dropdown estados de México -->
                                             <div class="form-group col-md-4">
                                                 <label for="state-input">State</label>
-                                                <select id="state-input" class="form-control">
+                                                <select id="state-input" class="form-control" name="state" required>
                                                     <option selected>Choose...</option>
 
                                                     <option value="0">Todo México</option>
@@ -175,7 +187,7 @@
                                             <!-- Zipcode -->
                                             <div class="form-group col-md-2">
                                                 <label for="Zip-input">Zip</label>
-                                                <input type="text" class="form-control" id="Zip-input" placeholder="Zip">
+                                                <input type="text" class="form-control" id="Zip-input" placeholder="Zip" name="Zip" required>
                                             </div>
                                         </div>
                                     </form>
@@ -186,7 +198,7 @@
                                     <div class="form-group col-md-4">
                                         <form action="/action_page.php">
                                             <label for="dateOfBirth">Date of Birth</label>
-                                            <input type="date" name="DOB" class="form-control" id="dateOfBirth">
+                                            <input type="date" name="DOB" class="form-control" id="dateOfBirth" required>
                                             <!-- <input type="submit" value="Submit"> -->
                                         </form>
                                     </div>
