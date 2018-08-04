@@ -1,0 +1,63 @@
+<nav class="navbar navbar-light m-3">
+    <a class="navbar-brand" href="/micava">
+        <img src="./images/cavalogo.png" width="100" height="60" class="d-inline-block align-top" alt="">
+    </a>
+
+    <div class="d-inline-block float-right m-2">
+        <a href="/logout">
+        <button id="logoutBtn" class="btn btm-sm btn-danger m-2">Logout</button>
+        </a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row float-right text-center">
+        <div class="m-2 mr-5" id="agregaProductos">
+            <a href="/carrito">
+                <img class="btnImg" src="./images/plus.png" alt="">
+            </a>
+            <p>Agregar</p>
+        </div>
+        <div class="m-2 ml-5" id="enviaProductos">
+            <a href="/enviar">
+                <img class="btnImg" src="./images/send.png" alt="">
+            </a>
+            <p>Envío</p>
+        </div>
+    </div>
+
+
+    <div id="cavaHolder">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="3" class="text-center">
+                        <h1>Mi Cava</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Producto</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each cava}}
+                <tr>
+                    <td scope="col">{{this.i}}</td>
+                    <td scope="col">{{this.cantidad}}</td>
+                    <td scope="col">{{this.producto}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="./js/micava.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-light m-3">
+    <a class="navbar-brand" href="/micava">
+        <img src="./images/cavalogo.png" width="100" height="60" class="d-inline-block align-top" alt="">
+    </a>
+    <div class="d-inline-block float-right m-2">
+        <a href="/logout">
+            <button id="logoutBtn" class="btn btm-sm btn-danger m-2">Logout</button>
+        </a>
+    </div>
+</nav>
+<div class="container">
+    <div id="cavaHolder">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="4" class="text-center">
+                        <h2>Enviar de mi Cava</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Cant. a Enviar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each cava}}
+                <tr>
+                    <td scope="col">{{this.i}}</td>
+                    <td scope="col">{{this.cantidad}}</td>
+                    <td scope="col">{{this.producto}}</td>
+                    <td>
+                        <button>-</button>
+                        <input type="text" value="0">
+                        <button>+</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

@@ -77,6 +77,58 @@
                                         </div>
                 
                                     </div>
+
+
+                        <!-- jQuery -->
+                        <script src="https://code.jquery.com/jquery.js"></script>
+
+                        
+
+                        <!-- Script -->
+                        <script>
+                            // Capture Button Click
+                            $("#add-user").on("click", function (event) {
+                                // prevent form from trying to submit/refresh the pinputDateOfBirth
+                                event.preventDefault();
+
+                                // Capture User Inputs and store them into variables
+                                var firstName = $("#firstName").val().trim();
+                                var lastName = $("#lastName").val().trim();
+                                var email = $("#email-input").val().trim();
+                                var address = $("#address-input").val().trim();
+                                var address2 = $("#address2-input").val().trim();
+                                var city = $("#city-input").val().trim();
+                                var state = $("#state-input").val().trim();
+                                var zip = $("#zip-input").val().trim();
+                                var dateOfBirth = $("#dateOfBirth-input").val().trim();
+                               
+
+                                // Console log each of the user inputs to confirm we are receiving them
+                                console.log(firstName);
+                                console.log(lastName);
+                                console.log(email);
+                                console.log(address);
+                                console.log(address2);
+                                console.log(city);
+                                console.log(state);
+                                console.log(zip);
+                                console.log(dateOfBirth);
+                                
+
+                                // Output all of the new information into the relevant HTML sections
+                                $("#firstName-display").text(firstName);
+                                $("#lastName-display").text(lastName);
+                                $("#email-display").text(email);
+                                $("#address-display").text(address);
+                                $("#address2-display").text(address2);
+                                $("#city-display").text(city);
+                                $("#state-display").text(state);
+                                $("#zip-display").text(zip);
+                                $("#dateOfBirth-display").text(dateOfBirth);
+                              
+
+                            });
+                        </script>
                 
 
 </body>

@@ -25,3 +25,92 @@ h2 {
     text-shadow: 2px 2px black;
     background-color: grey;
 }
+
+.btnImg {
+    height: 50px;
+}
+
+.prodBtn {
+    background: rgba(34, 50, 63, 0.8);
+    color: #e2dad4;
+}
+
+.card-body {
+    background: rgba(226, 218, 212, 0.8);
+}
+
+.headers {
+    background: rgba(34, 50, 63, .9) !important;
+}
+
+.collapsed, .btn-link{
+    color: #e2dad4;
+}
+
+
+
+body {
+    background-image: url("../images/bgImg.jpg");
+    background-size: 100vh 100vh;
+    color: #e2dad4;
+}
+#initDiv {
+    height: 100px;
+}
+
+th, td{
+    background: rgba(34, 50, 63, 0.7);
+}
+
+.prodBtn:hover {
+    background: rgba(34, 50, 63, 1) !important;
+    color: #e2dad4;
+}
+
+.btn-link:link {
+    text-decoration: none !important;
+}.btn-link:visited {
+    text-decoration: none !important;
+}
+.btn-link:hover {
+    text-decoration: none !important;
+}
+
+.jumbotron, {
+    background: rgba(226, 218, 212, 0);
+    color: rgba(34, 50, 63, 1);
+}
+
+a {
+    color: rgba(34, 50, 63, 1);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a:link{
+    color: rgba(34, 50, 63, 1);
+    font-weight: bold;
+}
+a:visited {
+    color: rgba(34, 50, 63, 1);
+}
+a:hover {
+        color: rgba(34, 50, 63, 1);
+}
+
+.modal, .modal-content{
+    background: rgba(34, 50, 63, .7);
+}
+
+label , .modal-header, input{
+    color:rgba(226, 218, 212, 1) !important;
+}
+
+input {
+    background: rgba(226, 218, 212, 0) !important;
+}
+
+#indexImg {
+    height: 600px;
+    opacity: .7;
+}
