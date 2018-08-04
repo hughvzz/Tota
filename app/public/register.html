@@ -57,13 +57,13 @@
                                     <!-- might have issues on id="reserve_name" -->
                                     <div class="form-group col-md-6">
                                         <label for="firstName-input">First Name</label>
-                                        <input type="text" class="form-control" id="reserve_firstName" placeholder="First Name" name="firstName" required>
+                                        <input type="text" class="form-control" id="firstName-input" placeholder="First Name" name="firstName" required>
                                     </div>
 
 
                                     <div class="form-group col-md-6">
                                         <label for="lastName-input">Last Name</label>
-                                        <input type="text" class="form-control" id="reserve_name" placeholder="Last Name"name="lastName" required>
+                                        <input type="text" class="form-control" id="lastName-input" placeholder="Last Name"name="lastName" required>
                                     </div>
 
                                     <form>
@@ -201,7 +201,7 @@
                                     <div class="form-group col-md-4">
                                         <form action="/action_page.php">
                                             <label for="dateOfBirth">Date of Birth</label>
-                                            <input type="date" name="DOB" class="form-control" id="dateOfBirth" required>
+                                            <input type="date" name="dateOfBirth" class="form-control" id="dateOfBirth" required>
                                             <!-- <input type="submit" value="Submit"> -->
                                         </form>
                                     </div>
@@ -229,14 +229,29 @@
 
                         <!-- Script -->
                         <script>
+
+
+                                function readCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(";");
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) {
+          return c.substring(nameEQ.length, c.length);
+        }
+      }
+      return null;
+    }
+
                             // Capture Button Click
                             $("#add-user").on("click", function (event) {
                                 // prevent form from trying to submit/refresh the pinputDateOfBirth
                                 event.preventDefault();
 
                                 // Capture User Inputs and store them into variables
-                                var firstName = $("#firstName").val().trim();
-                                var lastName = $("#lastName").val().trim();
+                                var firstName = $("#firstName-input").val().trim();
+                                var lastName = $("#lastName-input").val().trim();
                                 var email = $("#email-input").val().trim();
                                 var address = $("#address-input").val().trim();
                                 var address2 = $("#address2-input").val().trim();
@@ -256,19 +271,34 @@
                                 console.log(state);
                                 console.log(zip);
                                 console.log(dateOfBirth);
-                                
 
-                                // Output all of the new information into the relevant HTML sections
-                                $("#firstName-display").text(firstName);
-                                $("#lastName-display").text(lastName);
-                                $("#email-display").text(email);
-                                $("#address-display").text(address);
-                                $("#address2-display").text(address2);
-                                $("#city-display").text(city);
-                                $("#state-display").text(state);
-                                $("#zip-display").text(zip);
-                                $("#dateOfBirth-display").text(dateOfBirth);
-                              
+
+ // Clear sessionStorage
+                                sessionStorage.clear();
+
+                                // Store all content into sessionStorage
+      sessionStorage.setItem("firstName", firstName);
+      sessionStorage.setItem("lastName",lastName );
+      sessionStorage.setItem("email", email);
+      sessionStorage.setItem("address", address);
+      sessionStorage.setItem("address2", address);
+      sessionStorage.setItem("city", city);
+      sessionStorage.setItem("state", state);
+      sessionStorage.setItem("zip", zip);
+      sessionStorage.setItem("dateOfBirth", dateOfBirth;
+
+
+      // By default display the content from sessionStorage
+      $("#firstName-display").text(sessionStorage.getItem("firstName"));
+      $("#lastName-display").text(sessionStorage.getItem("lastName"));
+    $("#email-display").text(sessionStorage.getItem("email"));
+    $("#address-display").text(sessionStorage.getItem("address"));
+    $("#address2-display").text(sessionStorage.getItem("address"));
+    $("#city-display").text(sessionStorage.getItem("city"));
+    $("#state-display").text(sessionStorage.getItem("state"));
+    $("#zip-display").text(sessionStorage.getItem("zip"));
+    $("#dateOfBirth-display").text(sessionStorage.getItem("dateOfBirth"));
+
 
                             });
                         </script>

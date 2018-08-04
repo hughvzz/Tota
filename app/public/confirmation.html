@@ -89,18 +89,7 @@
                             // Capture Button Click
                             $("#add-user").on("click", function (event) {
                                 // prevent form from trying to submit/refresh the pinputDateOfBirth
-                                event.preventDefault();
-
-                                // Capture User Inputs and store them into variables
-                                var firstName = $("#firstName").val().trim();
-                                var lastName = $("#lastName").val().trim();
-                                var email = $("#email-input").val().trim();
-                                var address = $("#address-input").val().trim();
-                                var address2 = $("#address2-input").val().trim();
-                                var city = $("#city-input").val().trim();
-                                var state = $("#state-input").val().trim();
-                                var zip = $("#zip-input").val().trim();
-                                var dateOfBirth = $("#dateOfBirth-input").val().trim();
+                                event.preventDefault()
                                
 
                                 // Console log each of the user inputs to confirm we are receiving them
